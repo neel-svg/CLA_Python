@@ -9,12 +9,12 @@ def add_car():
     car.append(car_tuple)
     return car
 
-
+# searches for car by any term
 def search_car(search_term):
     return [item for item in car if item[0] == search_term or item[1] == search_term or item[2] == search_term]
 
 
-# only removes if first element is put in
+# Removes car by manufacturer type
 def remove_car(remove_term):
     updated = list(filter(lambda x: x[0] != remove_term, car))
     return updated
